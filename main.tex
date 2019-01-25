@@ -1,0 +1,234 @@
+\documentclass[conference]{csce}
+
+\usepackage[hmargin=.75in,vmargin=1in]{geometry}
+\usepackage[american]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage{caption}
+
+%%% Class name, option, and packages above are mandatory for generating an appropriate format 
+%%% suitable for the CSCE style. Therefore, do not make any changes unless you know 
+%%% what you are doing.
+%%% However, if you need to use the subfig package, you must call it BEFORE the caption package.
+%%% (NOTE: the subfig package probably will work but has not been tested.)
+
+%%% The csce.cls is derived (in a quite dirty and quick manner) from the IEEEtrans.cls.
+%%% At least the following packages are incompatible with the csce.cls:
+%%% <DO NOT USE THEM> setspace, titlesec, amsthm
+%%% There may be more, so if you use a package that produces a lot of errors or weird results, 
+%%% be advised to avoid that package.
+
+%%% Below packages are recommended to use for better results and compatible with the csce.cls
+\usepackage{textcomp}
+\usepackage{epsfig,graphicx}
+\usepackage{xcolor}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{fixltx2e} % Fixing numbering problem when using figure/table* https://www.overleaf.com/project/5ba29f4a5004e017c0c7448c
+\usepackage{booktabs}
+
+%%% Below packages are probably useful for some table-formatting purposes. Compatibility is not yet
+%%% tested but probably fine.
+%\usepackage{tabularx}
+%\usepackage{tabulary}
+https://www.overleaf.com/project/5ba29f4a5004e017c0c7448c
+%%% Using the hyperref package is not really necessary for conference papers, but if your paper includes
+%%% a lot of URLs, and you wish them to be line-breakable, it might be useful.  When you need to use the
+%%% hyperref package, make sure you set <colorlinks option> = true and all link colors black as shown in
+%%% the sample below (the sample calls the ifpdf package, too).
+%\usepackage{ifpdf} 
+%\ifpdf
+%\usepackage[pdftex,naturalnames,breaklinks=true,colorlinks=true,linkcolor=black,citecolor=black,filecolor=black,menucolor=black,urlcolor=black]{hyperref}
+%\else
+%\usepackage[dvips,naturalnames,breaklinks=true]{hyperref}
+%\fi
+
+\columnsep 6mm  %%% DO NOT CHANGE THIS
+
+
+\title{\bf Cloudbursting: Stay-Or-Go }     %%%% Replace with your title.
+
+%%%% Replace the author and institution/affiliation names. 
+%%%% Make sure the author names are boldface.
+\author{
+{\bfseries Author1$^1$, Author2$^2$, Author3$^2$, and Author4$^3$}\\
+Department of Computer Science, Kansas State University\\ Manhattan, Kansas, USA\\
+}
+
+\begin{document}
+
+
+\maketitle %%%% To set Title and Author names.
+
+
+\begin{abstract}%%%% Replace with your abstract.
+We explored techniques/models for estimating
+probability for an High Performance Computing cluster job to fail 
+based on the user submission information available at run time to 
+the scheduler. Using naive Bayes logistic regression, we got high 
+accuracy in predicting jobs failed. However, the sensitivity 
+of the results were abysmal and this was suspected to be due to the 
+imbalanced data set used for the regression analysis. 
+Apparently, 90 something percent of jobs submitted to the cluster passed.
+
+Our ultimate aim is to provide "cloud-bursting" suggestions to the 
+user to either keep running their job on the cluster or migrate their
+job to cloud services like AmazonCloud. This is important as we want to 
+be minimize the effects of job killed as a result of underestimation of
+computing resources needed to complete jobs.
+
+\end{abstract}
+
+
+\vspace{1em}
+\noindent\textbf{Keywords:}
+ {\small  Replace with keywords} %%%% Replace with your keywords
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Introduction}
+abcd
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+\section{Utility Function}
+We will model the Utility Estimation Model for Beocat using an MDP. Important components include:
+
+Agent, Environment, State of a job, Actions, Utility
+
+\subsection{Stay-Or-Go}
+
+bbbb
+
+\subsection{Ground Features and Relevance} 
+
+ccc
+
+\subsection{Data Preparation and Feature Analysis}
+ddd
+
+\subsection{Feature Construction for User Modeling}
+eee
+
+\subsection{Machine Learning Implementation}
+fff
+
+\subsection*{Prediction Techniques}
+
+ggg
+
+\subsection*{Classification Techniques}
+
+hhh
+
+\section{Evaluation}
+iii
+
+\section{Conclusions and Future Work}
+
+jjj  
+
+\subsection{Findings and Conclusions}
+
+kkk
+
+\subsection{Current and Future Work}
+
+lll
+
+\section{Acknowledgements}
+
+mmm
+
+\begin{thebibliography}{1}
+	\providecommand{\url}[1]{#1}
+	\csname url@rmstyle\endcsname
+	\providecommand{\newblock}{\relax}
+	\providecommand{\bibinfo}[2]{#2}
+	\providecommand\BIBentrySTDinterwordspacing{\spaceskip=0pt\relax}
+	\providecommand\BIBentryALTinterwordstretchfactor{4}
+	\providecommand\BIBentryALTinterwordspacing{\spaceskip=\fontdimen2\font plus
+		\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
+		\fontdimen4\font\relax}
+	\providecommand\BIBforeignlanguage[2]{{%
+			\expandafter\ifx\csname l@#1\endcsname\relax
+			\typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
+			\typeout{** loaded for the language `#1'. Using the pattern for}%
+			\typeout{** the default language instead.}%
+			\else
+			\language=\csname l@#1\endcsname
+			\fi
+			#2}}
+	
+	\bibitem{IEEE:confwithpaper}
+	 Wolfgang. Gentzsch, ``Sun grid engine: Towards creating a compute power grid,'' 
+ 	in \emph{Cluster Computing and the Grid, 2001. Proceedings. First IEEE/ACM International Symposium on}, pp. 35-36. IEEE, 2001.
+	
+	\bibitem{IEEE:confwithpaper}
+	Yoo, Andy B., Morris A. Jette, and Mark Grondona. ``Slurm: Simple linux utility for resource management,'' in \emph{Workshop on Job Scheduling Strategies for Parallel Processing}, pp. 44-60. Springer, Berlin, Heidelberg, 2003.
+	
+	\bibitem{IEEE: confwithpaper}
+	Matsunaga, Andr{\'e}a and Fortes, Jos{\'e} AB. ``On the use of machine learning to predict the time and resources consumed by applications,'' in \emph{Proceedings of the 2010 10th IEEE/ACM International Conference on Cluster, Cloud and Grid Computing}, pp. 495-504. IEEE Computer Society, 2010.
+	
+	\bibitem{IEEE: journal}
+	Bugbee, B., and Phillips, C., Egan, H., and Elmore, R., Gruchalla, K., and Purkayastha, A. "Prediction and characterization of application power use in a high-performance computing environment.'' \emph{Statistical Analysis and Data Mining: The ASA Data Science Journal} vol. 10, pp. 155-165, 2017.
+	
+	\bibitem{IEEE: confwithpaper}
+	Berral, Josep Ll and Goiri, {\'I}{\~n}igo and Nou, Ram{\'o}n and Juli{\`a}, Ferran and Guitart, Jordi and Gavald{\`a}, Ricard and Torres, Jordi. ``Towards energy-aware scheduling in data centers using machine learning,'' in \emph{Proceedings of the 1st International Conference on energy-Efficient Computing and Networking}, pp. 215-224. ACM, 2010.
+	
+	\bibitem{IEEE: journal}
+	Chou, J. S., Chiu, C. K., Farfoura, M., and Al-Taharwa, ``Optimizing the prediction accuracy of concrete compressive strength based on a comparison of data-mining techniques,''  \emph{Journal of Computing in Civil Engineering}., vol. 25, pp. 242-253, 2000.
+	
+	\bibitem{IEEE: confwithpaper}
+	Li, J., Ma, X., Singh, K., Schulz, M., de Supinski, B. R., and McKee, S. A. ``Machine learning based online performance prediction for runtime parallelization and task scheduling,'' in \emph{Performance Analysis of Systems and Software, 2009. ISPASS 2009. IEEE International Symposium on}, pp. 89-100. IEEE, 2009.
+	
+	\bibitem{IEEEE: confwithpaper}
+	Rodrigues, E. R., Cunha, R. L., Netto, M. A., and Spriggs, M. ``Helping HPC users specify job memory requirements via machine learning,'' in \emph{Proceedings of the Third International Workshop on HPC User Support Tools}, pp. 6-13, IEEE Press, 2016.
+	
+	\bibitem{IEEE: journal}
+	Kohavi, R., and John, G. H., ``Wrappers for Feature Subset Selection'', \emph{Artificial Intelligence}, vol. 97, no. 1, pp. 273-324, 1997.
+ 
+	\bibitem{IEEE: journal}
+	Hsu, W. H., Welge, M., Redman, T., and Clutter, D.  ``High-Performance Commercial Data Mining: A Multistrategy Machine Learning Application.'' \emph{Data Mining and Knowledge Discovery}, vol. 6, no. 4, pp. 361-391, 2002.
+    
+	\bibitem{IEEE: book}
+	Howes, T., and Smith, M, \emph{LDAP: programming directory-enabled applications with lightweight directory access protocol}. Sams Publishing, 1997.	
+
+	\bibitem{IEEE: journal}
+	Webb, G. I., Pazzani, M. J., and Billsus, D, ``Machine learning for user modeling,'' \emph{User modeling and user-adapted interaction}, vol. 11, pp. 19-29, 2001.
+	
+	\bibitem{IEEE: conference}
+	Yao, Y., Zhao, Y., Wang, J., and Han, S, ``A model of machine learning based on user preference of attributes''. \emph{International Conference on Rough Sets and Current Trends in Computing}, pp. 587-596. Springer, Berlin, Heidelberg, 2006.
+
+	\bibitem{IEEE: chapter}
+    Yang, M., Hsu, W. H., and Kallumadi, S. ``Predictive Analytics of Social Networks: A Survey of Tasks and Techniques.'' In Hsu, W. H., ed., \emph{Emerging Methods in Predictive Analytics: Risk Management and Decision-Making}, pp. 297-333. IGI Global, 2016.
+    
+    \bibitem{IEEE: tutorial}
+    Beutel, A., Akoglu, L., and Faloutsos, C. ``Graph-Based User Behavior Modeling: From Prediction to Fraud Detection''. In Cao, L., Zhang, C., Joachims, T., Webb, G. I., Margineantu, D. D., Williams, G., eds. \emph{Proceedings of the 21th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD 2015), Tutorial Program}, pp. 2309-2310, 2015.
+    
+    \bibitem{IEEE: journal}
+    Adedoyin-Olowe, M., Gaber, M. M., and Stahl, F., ``A Survey of Data Mining Techniques for Social Media Analysis'', vol. 2014, pp. 1-25, 2014.
+    
+    \bibitem{IEEE: conference}
+    Hsu, W. H., Lancaster, J. P., Paradesi, M. S. R., and Weninger, T. ``Structural Link Analysis from User Profiles and Friends Networks: A Feature Construction Approach'', \emph{Proceedings of the 1st International Conference on Weblogs and Social Media (ICWSM 2007)}, pp. 75-80, 2007.
+
+\bibitem{IEEE: journal}
+    Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., Vanderplas, J., Passos, A., Cournapeau, D., Brucher, M., Perrot, M., and Duchesnay, E. ``Scikit-learn: Machine Learning in Python'' \emph{Journal of Machine Learning Research}, vol. 12, pp. 2825-2830, 2011.
+
+	\bibitem{IEEE: book}
+	Massaron, L., and Boschetti, A, \emph{Regression Analysis with Python}. Packt Publishing Ltd, 2016.
+
+\end{thebibliography}
+
+\end{document}
